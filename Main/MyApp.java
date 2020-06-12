@@ -1,5 +1,6 @@
 package Main;
 import java.util.Scanner;
+import Calculation.RentalDVD;
 
 /**
  * Main Method
@@ -7,7 +8,7 @@ import java.util.Scanner;
  * @author (2018315034 정철우, 2018315038 이혜인, 2018315040 김선민) 
  * @version (2020.06.12)
  */
-public class MyApp
+public class MyApp 
 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -17,5 +18,8 @@ public class MyApp
         int fee = sc.nextInt();
         System.out.println("대여 시작일로부터 경과된 시간을 입력하세요: ");
         int period = sc.nextInt();
+        
+        RentalDVD rd = new RentalDVD();
+        System.out.println(rd.calcRentalFee(age, fee, period) + "원입니다");
     }
 }
